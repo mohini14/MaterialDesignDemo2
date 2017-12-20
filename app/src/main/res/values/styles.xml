@@ -6,27 +6,20 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
-        <!--<string name="app_name">Material Design</string>-->
-        <!--<string name="action_settings">Settings</string>-->
-        <!--<string name="action_search">Search</string>-->
-        <!--<string name="drawer_open">Open</string>-->
-        <!--<string name="drawer_close">Close</string>-->
-
-        <!--<string name="nav_item_home">Home</string>-->
-        <!--<string name="nav_item_friends">Friends</string>-->
-        <!--<string name="nav_item_notifications">Messages</string>-->
-
-        <!--&lt;!&ndash; navigation drawer item labels  &ndash;&gt;-->
-        <!--<string-array name="nav_drawer_labels">-->
-            <!--<item>@string/nav_item_home</item>-->
-            <!--<item>@string/nav_item_friends</item>-->
-            <!--<item>@string/nav_item_notifications</item>-->
-        <!--</string-array>-->
-
-        <!--<string name="title_messages">Messages</string>-->
-        <!--<string name="title_friends">Friends</string>-->
-        <!--<string name="title_home">Home</string>-->
     </style>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
 
 </resources>

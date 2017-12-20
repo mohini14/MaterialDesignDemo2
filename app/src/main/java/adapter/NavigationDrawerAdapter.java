@@ -49,6 +49,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         NavDrawerItem current = data.get(position);
+        if(holder.title != null)
         holder.title.setText(current.getTitle());
     }
 
@@ -62,7 +63,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title);
+            title =  itemView.findViewById(R.id.textview_drawerow);
         }
     }
 

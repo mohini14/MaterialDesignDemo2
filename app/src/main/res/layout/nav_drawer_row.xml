@@ -5,7 +5,7 @@
     android:clickable="true">
 
     <TextView
-        android:id="@+id/nav_drawer_row_layout"
+        android:id="@+id/textview_drawerow"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"

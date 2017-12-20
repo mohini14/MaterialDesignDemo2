@@ -6,12 +6,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+import android.view.View;
 
 import com.example.mohini.materiladesigndemo.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
     private Toolbar mToolBar;
+    private FragmentDrawer drawerFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar( ).setDisplayShowHomeEnabled(true);
 /*
             getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 */
+
+            drawerFragment = (FragmentDrawer)
+                    getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
+            drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolBar);
+            drawerFragment.setDrawerlisterner(this);
         }
     }
 
@@ -50,5 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    
+
+    @Override
+    public void onDrawerItemSelected(View view, int position) {
+
+    }
 }
